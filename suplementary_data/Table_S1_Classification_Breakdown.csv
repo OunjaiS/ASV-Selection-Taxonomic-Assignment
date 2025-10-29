@@ -1,0 +1,7 @@
+Classification,Count,Percentage,Mean_Reads,Median_Phylogenetic_Distance,Mean_Phylogenetic_Distance
+Technical_Artifacts,102083,58.02,2,1.136,1.244
+Environmental_Contamination,24977,14.2,138,1.282,1.722
+Intra_Species_Variant,19830,11.27,60,0.053,0.143
+Authenticated,15901,9.04,1904,0,0
+Cross_Contamination,13163,7.48,100,1.083,1.023
+Total,175954,100.01,-,-,-
