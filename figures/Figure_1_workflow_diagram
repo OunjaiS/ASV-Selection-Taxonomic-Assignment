@@ -1,0 +1,54 @@
+// Manuscript ASV Analysis Workflow
+digraph {
+	graph [fontname=Helvetica fontsize=26 label="ASV Analysis Workflow" labelloc=t nodesep=0.7 rankdir=TB ranksep=1.0 splines=ortho]
+	node [fontname=Helvetica fontsize=14 shape=box style="filled, rounded"]
+	edge [arrowsize=0.7 color="#6b7280" fontname=Helvetica fontsize=11]
+	step_2_1 [label="1 Specimen Collection & Processing
+(Sampling, Sorting, Imaging, ID, DNA Extraction)" color="#6b7280" fillcolor="#e0f2fe"]
+	step_2_2 [label="2 Molecular Data Generation
+(COI PCR Amplification, Illumina Sequencing)" color="#6b7280" fillcolor="#e0f2fe"]
+	stage1_bioinfo [label="3 Bioinformatics Pipeline
+Raw Reads → Filtered Reads & ASV FASTA
+Tools: cutadapt, pear, vsearch, filtertranslate" color="#6b7280" fillcolor="#fef9c3"]
+	step_2_4 [label="4 Phylogenetic Framework Construction
+(Mitogenome Assembly, Tree Building)
+Tools: MAFFT, RAxML" color="#6b7280" fillcolor="#e0e7ff" shape=cylinder]
+	stage2_seq_analysis [label="Sequence Analysis Script
+(Analysis of Features & Quality)
+Tools: Python (pandas, BioPython)" color="#6b7280" fillcolor="#ffedd5"]
+	stage3_classification [label="5 ASV Authentication & Classification
+(MRCT, Phylo Placement, Rules, ML)
+Tools: Python (pandas, scikit-learn)" color="#6b7280" fillcolor="#fee2e2"]
+	stage4_stats [label="6 Statistical Analysis
+(Generate Manuscript Stats & Summaries)
+Tools: Python (pandas, scipy)" color="#6b7280" fillcolor="#fce7f3"]
+	final_output [label="Final Outputs:
+Authenticated Barcodes &\Results (Stats, Summaries)" color="#6b7280" fillcolor="#dcfce7" shape=note]
+	step_2_1 -> step_2_2 [label="DNA Extract"]
+	step_2_2 -> stage1_bioinfo [label="Raw Paired-End Reads"]
+	stage1_bioinfo -> stage2_seq_analysis [label="ASV FASTA"]
+	metadata_input [label="Input: Original Metadata" color="#6b7280" fillcolor="#e0f2fe" shape=folder]
+	metadata_input -> stage2_seq_analysis [label="Metadata Table"]
+	stage2_seq_analysis -> stage3_classification [label="Analysis Table
+(incl. Quality Scores, Motifs etc.)"]
+	step_2_4 -> stage3_classification [label="Phylogenetic Reference Tree"]
+	stage3_classification -> stage4_stats [label="Final Classification Table"]
+	stage4_stats -> final_output [label=Results]
+	subgraph cluster_legend {
+		node [fontsize=12 height=0.4 shape=box style=filled width=1.8]
+		color=lightgrey fontsize=14 label="Methodology Legend" style=rounded
+		legend_wetlab [label="Specimen & Molecular" color="#6b7280" fillcolor="#e0f2fe"]
+		legend_bioinfo [label=Bioinformatics color="#6b7280" fillcolor="#fef9c3"]
+		legend_phylo [label="Phylo Framework" color="#6b7280" fillcolor="#e0e7ff"]
+		legend_seq_analysis [label="Sequence Analysis" color="#6b7280" fillcolor="#ffedd5"]
+		legend_classify [label=Classification color="#6b7280" fillcolor="#fee2e2"]
+		legend_stats [label=Statistics color="#6b7280" fillcolor="#fce7f3"]
+		legend_output [label="Final Output" color="#6b7280" fillcolor="#dcfce7" shape=note]
+		legend_wetlab -> legend_bioinfo [style=invis]
+		legend_bioinfo -> legend_phylo [style=invis]
+		legend_phylo -> legend_seq_analysis [style=invis]
+		legend_seq_analysis -> legend_classify [style=invis]
+		legend_classify -> legend_stats [style=invis]
+		legend_stats -> legend_output [style=invis]
+	}
+}
