@@ -1,3 +1,0 @@
-data: ASV_data_with_integrated_analysis.csv
-
-https://drive.google.com/file/d/1kvJCu_cu873Id1HKWLVucT8uYFen41Vz/view?usp=drive_link
