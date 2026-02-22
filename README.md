@@ -18,7 +18,10 @@ This repository contains the analysis scripts used to authenticate COI Amplicon 
 - NUMT validation via codon usage bias: 1,790 NUMTs validated across 4,496 specimens
 - DADA2 benchmarking: 75,481 NUMT/Contamination records passed DADA2 filters but failed phylogenetic authentication
 
-> **Raw data and sequences** are archived on Dryad: https://doi.org/10.5061/dryad.v41ns1s9q
+> **Raw data and sequences** are archived on Dryad (pre-publication share link):
+> http://datadryad.org/share/LINK_NOT_FOR_PUBLICATION/9bddJTVks3Y2EBMTN8EZPUJi0Lg3IlwUmKl2ETDnX3k
+>
+> *Permanent DOI (available after publication):* https://doi.org/10.5061/dryad.v41ns1s9q
 
 ---
 
@@ -51,7 +54,7 @@ Performs sequence quality control and composition analysis on the raw ASV sequen
 - Assigns sequence quality grade (A+, A, B, C, Fail) based on multiple criteria
 - Outputs `ASV_Complete_Analysis.csv` and `Analysis_Summary.csv`
 
-**Input files (download from Dryad — https://doi.org/10.5061/dryad.v41ns1s9q):**
+**Input files** (download from Dryad pre-publication share link: http://datadryad.org/share/LINK_NOT_FOR_PUBLICATION/9bddJTVks3Y2EBMTN8EZPUJi0Lg3IlwUmKl2ETDnX3k):
 - `ASV_sequences_64544.fasta` — unique ASV sequences (FASTA format, 64,544 sequences)
 
 ---
@@ -69,7 +72,7 @@ Implements the multi-stage ASV authentication and classification pipeline.
 - Performs co-occurrence analysis to identify stable NUMTs present in ≥2 specimens
 - Outputs `ASV_Final_Classification.csv`, `Classification_Statistics.csv`, `Feature_Importance.csv`
 
-**Input files (download from Dryad):**
+**Input files (download from Dryad share link above):**
 - `ASV_Authentication_Results_030925.csv` — Main dataset: 175,954 ASV records with phylogenetic distance, read counts, specimen ID, family assignment, and collection metadata
 
 ---
@@ -85,7 +88,7 @@ Performs all statistical comparisons reported in the manuscript.
 - Uses Spearman correlation for continuous predictors (sequencing depth, batch size)
 - Generates Table S1 (country success), Table S2 (method success), Table S3 (batch success), Table S4 (family success), Table S5 (effect sizes for all comparisons)
 
-**Input files (download from Dryad):**
+**Input files (download from Dryad share link above):**
 - `ASV_Authentication_Results_030925.csv` — Main dataset with collection metadata (country, method, batch, family)
 
 ---
@@ -103,7 +106,7 @@ Performs codon usage bias analysis to provide molecular evidence supporting NUMT
 - Performs PCA on per-ASV RSCU values to visualise group separation (Figure 7C)
 - Generates Figure 7 (4-panel: GC violin, ENC violin, PCA, RSCU bar chart)
 
-**Input files (download from Dryad):**
+**Input files (download from Dryad share link above):**
 - `ASV_Authentication_Results_030925.csv` — Full classification with ASV sequences
 - `ASV_sequences_64544.fasta` — ASV sequences for codon table generation
 
@@ -121,7 +124,7 @@ Benchmarks the DADA2 denoising pipeline against the phylogenetic authentication 
 - Generates Supplementary Figure S2 (4-panel benchmarking figure)
 - Generates Supplementary Table S6 (DADA2 analysis summary)
 
-**Input files (download from Dryad):**
+**Input files (download from Dryad share link above):**
 - `ASV_Authentication_Results_030925.csv` — Main classification results
 - Requires `5_dada2_chimera_detection.R` output (`dada2_chimeras.csv`, `dada2_nonchimeras.csv`)
 
@@ -140,7 +143,7 @@ Runs DADA2 chimera detection (`isBimeraDenovo`) on the ASV sequences using the R
 
 **Note:** This is the improved version (v2) that uses unique sequence deduplication. The original v1 used abundance-weighted mapping.
 
-**Input files (download from Dryad):**
+**Input files (download from Dryad share link above):**
 - `ASV_sequences_64544.fasta` — Unique ASV sequences
 
 **R dependencies:**
@@ -186,7 +189,7 @@ jupyter notebook
 
 | Resource | Location |
 |---|---|
-| Raw sequences & authentication results | [Dryad](https://doi.org/10.5061/dryad.v41ns1s9q) |
+| Raw sequences & authentication results | [Dryad (pre-publication share)](http://datadryad.org/share/LINK_NOT_FOR_PUBLICATION/9bddJTVks3Y2EBMTN8EZPUJi0Lg3IlwUmKl2ETDnX3k) |
 | Analysis scripts | This repository |
 | Code archive (Zenodo) | https://doi.org/10.5281/zenodo.XXXXXXX |
 | Specimen images | [Flickr](https://www.flickr.com/photos/site-100/) |
