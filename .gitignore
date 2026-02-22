@@ -49,3 +49,4 @@ raw_data/
 # AI assistant working files
 .gemini/
 .claude/
+suplementary_data/metadata.csv
