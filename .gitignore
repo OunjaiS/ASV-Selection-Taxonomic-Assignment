@@ -3,6 +3,23 @@
 .AppleDouble
 .LSOverride
 
+# Large files — archived on Dryad instead
+raw_data/
+*.fastq
+*.fastq.gz
+*.bam
+*.sam
+data_analysis/classification_analysis/
+data_analysis/numt_validation/per_asv_rscu_matrix.csv
+media-1.pdf
+
+# PDF figures — PNG versions are enough for GitHub
+figures/*.pdf
+script/Figure_6_Manuscript_Workflow.pdf
+
+# Large notebooks with embedded figure outputs (> 200KB)
+script/4_manuscript_figures.ipynb
+
 # Python
 __pycache__/
 *.py[cod]
