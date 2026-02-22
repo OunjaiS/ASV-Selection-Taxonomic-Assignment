@@ -1,0 +1,8 @@
+Level,Factor,Test,Statistic,p_value,Effect_Size,Interpretation
+Specimen,Family,Chi-square,χ² = 2971.57,< 0.001,Cramér's V = 0.410,Large
+Specimen,Country,Chi-square,χ² = 1268.25,< 0.001,Cramér's V = 0.262,Medium
+Specimen,Collection Method,Chi-square,χ² = 563.02,< 0.001,Cramér's V = 0.178,Medium
+Specimen,Sequencing Batch,Chi-square,χ² = 1181.31,< 0.001,Cramér's V = 0.252,Medium
+ASV,Phylogenetic Distance,Mann-Whitney U,"U = 22,961,044",< 0.001,Cohen's d = -0.820,Large
+ASV,Read Count,Mann-Whitney U,"U = 1,100,432,821",< 0.001,Cohen's d = 1.384,Large
+ASV,Proportional Abundance,Mann-Whitney U,"U = 690,115,522",< 0.001,Cohen's d = 0.468,Medium

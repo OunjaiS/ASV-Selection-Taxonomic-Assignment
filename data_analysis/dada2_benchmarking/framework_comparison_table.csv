@@ -1,0 +1,16 @@
+Feature,DADA2_Pipeline,Our_Framework
+Denoising algorithm,DADA2 divisive amplicon denoising,VSEARCH UNOISE3
+Error model,Parametric error model (learned from data),Alpha-based error correction (α=2)
+Chimera detection,removeBimeraDenovo (consensus/pooled),UCHIME3 de novo
+Minimum abundance threshold,Implicit (error model-based),MRCT = 4 reads (empirically optimised)
+Length filtering,User-specified (optional),418 bp (expected COI amplicon)
+Translation validation,Not included,Invertebrate mitochondrial code (Table 5)
+Specimen-level authentication,Not included,Yes (specimen-ASV abundance matching)
+Phylogenetic placement,Not included,"Yes (13,380-taxon reference tree)"
+Taxonomic congruence check,Not included,Yes (3-level family/subfamily verification)
+NUMT detection,Not included,Yes (abundance + phylogenetic distance)
+Cross-contamination detection,Not included,Yes (specimen co-occurrence analysis)
+Environmental contamination detection,Not included,Yes (taxonomic incongruence detection)
+Intra-individual variant classification,Not included,Yes (NUMT vs heteroplasmy classification)
+Multi-category ASV classification,Not included (binary: ASV or error),"Yes (5 categories: Auth, NUMT, Cross, Env, Tech)"
+Quality-weighted scoring,Not included,Yes (ML-based confidence scoring)

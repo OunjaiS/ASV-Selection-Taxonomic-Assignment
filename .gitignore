@@ -1,0 +1,34 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.ipynb_checkpoints/
+*.egg-info/
+.env
+.venv/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Large data files (upload to Dryad separately)
+raw_data/
+*.fastq
+*.fastq.gz
+*.bam
+*.sam
+
+# Temporary files
+*.tmp
+*.log
+*.swp
+
+# AI assistant working files
+.gemini/
+.claude/
