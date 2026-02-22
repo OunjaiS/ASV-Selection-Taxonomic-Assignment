@@ -1,4 +1,0 @@
-Scenario,Records_retained,Authenticated,NUMTs_present,Environmental_contamination_present,Technical_artifacts_present
-DADA2-like (reads≥2),119092,15921,36214,39267,27690
-MRCT=4 (our pipeline),91402,15921,36214,39267,0
-Full authentication framework,15921,15921,0,0,0
