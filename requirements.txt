@@ -1,0 +1,30 @@
+# Python dependencies for ASV authentication analysis
+# Tested with Python 3.11
+#
+# Install:
+#   pip install -r requirements.txt
+#
+# Or with conda (recommended):
+#   conda create -n asv-auth python=3.11
+#   conda activate asv-auth
+#   pip install -r requirements.txt
+
+# Core data analysis
+pandas>=1.5
+numpy>=1.23
+scipy>=1.9
+
+# Machine learning (script 2)
+scikit-learn>=1.1
+
+# Visualization
+matplotlib>=3.6
+seaborn>=0.12
+
+# Statistical modeling (script 3)
+statsmodels>=0.14
+
+# Notebook execution
+jupyter>=1.0
+nbconvert>=7.0
+ipykernel>=6.0
