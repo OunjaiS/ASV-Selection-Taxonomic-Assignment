@@ -1,5 +1,5 @@
 # Reproducibility Code
-**Diversity and Phylogenetic Placement of Amplicon Sequence Variants in Single-Specimen Metabarcoding of Tropical Insects**  
+**Phylogenetic Authentication of Amplicon Sequence Variants in Single-Specimen Metabarcoding of Tropical Insects**  
 *Molecular Ecology Resources* — in press (2026)
 
 ---
